@@ -1,6 +1,5 @@
 const path = require('path')
 const fs = require('fs')
-const privConfig = require('./config.priv.js')
 const ip = require('ip')
 
 module.exports = app => {
