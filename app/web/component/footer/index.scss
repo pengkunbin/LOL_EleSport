@@ -1,0 +1,20 @@
+.footerMain{
+    height: 264px;
+    background: #E3E2E2;
+    .footerRow{
+        padding-left: 70px;
+        padding-top: 100px; 
+        height: 200px;
+        vertical-align: middle;
+        .secondImg{
+            position: relative;
+            top:-10px;
+        }
+        p{
+            padding: 5px;
+            font-size: 12px;
+            color: #9f9378;
+        }
+    }
+    
+}

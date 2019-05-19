@@ -1,0 +1,18 @@
+.visionRow {
+    padding: 70px;
+    .ant-tabs-nav .ant-tabs-tab-active{
+        color: #F51746;
+    }
+    .ant-tabs-nav .ant-tabs-tab:hover{
+        color: #F51746 !important;
+    }
+    .ant-tabs-ink-bar{
+        background-color: #F51746;
+    }
+    .ant-card-grid{
+        padding: 0;
+    }
+    .PaRow{
+        padding-top: 20px;
+    }
+}

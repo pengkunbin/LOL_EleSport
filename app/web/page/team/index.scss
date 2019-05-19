@@ -1,0 +1,36 @@
+.club-tit {
+    border-left: 6px solid #cea04a;
+    border-right: 6px solid #cea04a;
+    height: 54px;
+    line-height: 54px;
+    text-align: center;
+    background: #ededee;
+    font-size: 36px;
+    font-weight: 700;
+    color: #404040;
+    margin: 0 auto;
+    width: 1282px;
+    margin-top: 70px;
+    margin-bottom: 30px;
+}
+.imglist {
+    .ant-card {
+        text-align: center;
+        margin-top: 10px;
+        .ant-card-cover {
+            img {
+                width: 150px;
+                margin: 0 auto;
+            }
+        }
+
+        p {
+            font-size: 24px;
+            color: rgb(114, 112, 112);
+            font-weight: 700;
+        }
+    }
+}
+.bottom{
+    margin-bottom: 70px;
+}

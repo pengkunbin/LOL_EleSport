@@ -1,0 +1,71 @@
+.table-background {
+    height: 1093px;
+    margin-left: 200px;
+    margin-right: 100px;
+    .table-title{
+            height: 41px;
+            font-size: 18px;
+            font-weight: bold;
+            color: #ded5c3;
+            text-align: center;
+            line-height: 40px;
+            background: #373737;
+    }
+    .card{
+        li{
+            width:139px;
+            height: 130px;
+            background: #2c2c2c;
+            cursor: pointer;
+        }
+        li:hover{
+            background: #262626;
+        }
+        .active{
+            background: #262626;
+            border-top: 2px solid #DDB159;
+        }
+        div{
+            width:45px;
+            height: 45px;
+            margin:0 auto;
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+        .victory{
+            background: url(../../asset/images/victory.png) no-repeat center;
+        }
+        .kill{
+            background: url(../../asset/images/kill.png) no-repeat center;
+        }
+        .money{
+            background: url(../../asset/images/money.png) no-repeat center;
+        }
+        .dead{
+            background: url(../../asset/images/dead.png) no-repeat center;
+        }
+        .eyes{
+            background: url(../../asset/images/eyes.png) no-repeat center;
+        }
+        .diseyes{
+            background: url(../../asset/images/diseyes.png) no-repeat center;
+        }
+        .smalldragon{
+            background: url(../../asset/images/smalldragon.png) no-repeat center;
+        }
+        .bigdragon{
+            background: url(../../asset/images/smalldragon.png) no-repeat center;
+        }
+        p{
+            text-align: center;
+            color: #989796;
+        }
+    }
+    .ant-table-thead > tr{
+        background: #3B3B3B;
+    }
+    .ant-table-thead span{
+        color:#C7BEAE;
+    }
+    
+}

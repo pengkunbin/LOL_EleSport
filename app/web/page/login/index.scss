@@ -1,0 +1,55 @@
+.background {
+    height: 100vh;
+    min-width: 1530px;
+
+    .background-image {
+        background: url(../../asset/images/background.jpg) no-repeat center;
+        height: 100vh;
+    }
+
+    .login {
+        width: 400px;
+        height: 500px;
+        padding: 50px;
+        padding-top: 170px;
+        margin-left: 200px;
+
+        .ant-checkbox-checked .ant-checkbox-inner {
+            background-color: #EE194A;
+            border-color: #EE194A;
+        }
+
+        .ant-checkbox-wrapper:hover .ant-checkbox-inner,
+        .ant-checkbox:hover .ant-checkbox-inner,
+        .ant-checkbox-input:focus+.ant-checkbox-inner {
+            border-color: #EE194A;
+        }
+
+        .a {
+            color: #EE194A;
+        }
+        .login-form-button{
+            width: 200px;
+        }
+        .ant-btn-primary {
+            background-color: #EE194A;
+            border-color: #EE194A;
+        }
+        .flex{
+            display: flex;
+            justify-content: space-between;
+            padding-top:20px;
+        }
+    }
+
+    .login-background {
+        position: absolute;
+        width: 400px;
+        height: 500px;
+        background: #ffffff;
+        opacity: 0.6;
+        top: 150px;
+        left: 200px;
+        border-radius: 25px;
+    }
+}

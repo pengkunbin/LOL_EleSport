@@ -1,0 +1,269 @@
+.ticket-main {
+    margin: 100px;
+    margin-top: 30px;
+    width: 1300px;
+
+    .ticket-title {
+        height: 150px;
+
+        .card {
+            width: 180px;
+            height: 100px;
+            text-align: center;
+
+            h4 {
+                font-size: 12px;
+                width: 180px;
+                padding-top: 10px;
+                font-family: '楷书';
+                color: #B3B3B3;
+                padding-bottom: 10px;
+            }
+
+            .h3 {
+                font-size: 14px;
+                width: 100px;
+                height: 20px;
+                background: #B3B3B3;
+                color: #ffffff;
+                margin: 0 auto;
+                margin-top: 10px;
+                padding-top: 3px;
+                font-family: '宋体';
+                border-radius: 15px;
+            }
+
+            p {
+                font-size: 12px;
+                width: 180px;
+                padding-top: 10px;
+                color: #B3B3B3;
+                font-family: '宋体';
+            }
+        }
+
+        .active {
+            background: #ffffff;
+            border-top: 2px solid #D82E24;
+
+            h4 {
+                background: #FDf4f4;
+                color: #D82E24;
+            }
+
+            .h3 {
+                background: #D82E24;
+            }
+
+            p {
+                color: #D82E24;
+            }
+        }
+    }
+
+    .ticket-img {
+        display: flex;
+        justify-content: space-between;
+
+        .vTicketImg {
+            padding-right: 30px;
+        }
+
+        .detail {
+            h1 {
+                margin: 0;
+                padding-bottom: 15px;
+                font-size: 32px;
+                border-bottom: 1px solid #B3B3B3;
+                font-weight: bold;
+                color: #555555;
+            }
+
+            .info {
+                border-bottom: 1px solid #B3B3B3;
+
+                .info1 {
+                    display: flex;
+                    justify-content: space-between;
+                    padding-top: 10px;
+
+                    .left {
+                        display: flex;
+                        font-size: 15px;
+
+                        .local {
+                            color: #A59999;
+                        }
+                    }
+
+                    .how-to-play {
+                        color: #cea04a;
+                    }
+
+                    .should-know {
+                        color: #cea04a;
+                    }
+                }
+
+                .info2 {
+                    display: flex;
+                    justify-content: space-between;
+                    padding-top: 15px;
+                    color: #A59999;
+                    font-size: 16px;
+                    vertical-align: middle;
+
+                    span {
+                        color: #555555;
+                    }
+
+                    .going {
+                        text-align: center;
+                        padding-top: 4.5px;
+                        width: 60px;
+                        height: 25px;
+                        background: #4B70F3;
+                        color: #ffffff;
+                        border-radius: 5px;
+                        font-size: 15px;
+                        margin-top: -5px;
+                    }
+                }
+
+                .info3 {
+                    padding-top: 15px;
+                    display: flex;
+                    justify-content: space-between;
+                    font-size: 15px;
+                    line-height: 20px;
+
+                    .warn {
+                        width: 100px;
+                        height: 60px;
+                    }
+                }
+            }
+
+            .money {
+                margin-top: 15px;
+                height: 120px;
+                background: #555555;
+                color: #ffffff;
+                font-size: 14px;
+
+                .before {
+                    padding: 20px;
+                    padding-bottom: 10px;
+                    display: flex;
+                    justify-content: space-between;
+                }
+
+                .after {
+                    padding: 20px;
+                    display: flex;
+                    justify-content: space-between;
+                }
+
+                .time {
+                    font-family: '宋体';
+                    line-height: 20px;
+                }
+
+                .price {
+                    width: 350px;
+                    font-size: 18px;
+                }
+            }
+
+            .money:after {
+                width: 98%;
+                height: 1px;
+                margin: 0px auto;
+                display: block;
+                content: '';
+                background: #fff;
+                visibility: visible;
+            }
+
+            button {
+                background: url(//ossweb-img.qq.com/images/lpl/web201612/buy-btn-over.jpg) center top;
+                width: 100%;
+                height: 100px;
+                color: #ffffff;
+                font-size: 16px;
+                margin-top: 20px;
+                border: 1px solid transparent; //自定义边框
+                outline: none
+            }
+        }
+    }
+    .league{
+        display: flex;
+        margin-top:70px;
+        
+        .league-info{
+            padding-top:10px;
+            margin-left: 40px;
+            h2{
+                font-size: 26px;
+                text-align: left;
+                font-weight: 400;
+                line-height: 1;
+                #GameName{
+                    color: #cea04a;
+                }
+            }
+        }
+        .league-intr{
+            color: #555;
+            font-size: 14px;
+            line-height: 28px;
+            padding-top: 18px;
+            #GameDesc{
+                font:'\5b8b\4f53',sans-serif;
+            }
+        }
+    }
+    .location{
+        padding-top:70px;
+        p{
+            font-size: 26px;
+            font-weight: 400;
+            color: #666;
+        }
+        .map{
+            margin-top:40px;
+            height: 500px;
+        }
+        .mapinfo{
+            margin-top:50px;
+            padding: 40px;
+            line-height: 30px;
+            background: #ECECEC;
+        }
+    }
+    .faq{
+        
+        margin-top:40px;
+        .faq-title{
+            line-height: 40px;
+            h2{
+                font-size: 28px;
+                color: #666;
+            }
+        }
+        .faq-cont{
+            line-height: 30px;
+            padding-top:40px;
+            div{
+                padding-top:10px;
+                h4{
+                    font-size: 18px;
+                }
+                p{
+                    font-size: 14px;
+                } 
+            }
+        }
+    }
+}

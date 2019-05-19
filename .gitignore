@@ -1,0 +1,10 @@
+run/
+config.priv.js
+logs/*
+package-lock.json
+yarn-error.log
+public/
+yarn.lock
+app/view/*
+config/manifest.json
+node_modules/
