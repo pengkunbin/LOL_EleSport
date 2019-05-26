@@ -1,5 +1,5 @@
 import React from 'react'
-import { Row, Col } from 'antd'
+import { Row } from 'antd'
 import 'antd/dist/antd.css'
 import './index.scss'
 import Header from 'component/header'

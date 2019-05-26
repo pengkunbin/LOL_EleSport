@@ -32,18 +32,15 @@ export default class Header extends React.Component {
                     <Col span={4}>
                         <NavLink to="/home" className="weblogo fl"></NavLink>
                     </Col>
-                    <Col span={menuType ? 18 : 12}></Col>
-                    {
-                        menuType ? '' :
-                            <Col span={6} className="header_right">
-                                <span className="login1901-avatar-wrap">
-                                    <img src="https://ossweb-img.qq.com/images/lol/v2/personal/avatar/default.png" width="50" className="fl" />
-                                </span>
-                                <span className="whiteColor fl">
-                                    亲爱的召唤师，请<NavLink to="/login" className="span">登录</NavLink>
-                                </span>
-                            </Col>
-                    }
+                    <Col span={12}></Col>
+                    <Col span={6} className="header_right">
+                        <span className="login1901-avatar-wrap">
+                            <img src="https://ossweb-img.qq.com/images/lol/v2/personal/avatar/default.png" width="50" className="fl" />
+                        </span>
+                        <span className="whiteColor fl">
+                            亲爱的召唤师，请<NavLink to="/login" className="span">登录</NavLink>
+                        </span>
+                    </Col>
                 </Row>
 
                 {

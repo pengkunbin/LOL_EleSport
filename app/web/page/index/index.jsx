@@ -24,7 +24,9 @@ import Course from '../course';
 import PersonData from '../persondata';
 import Login from 'page/login'
 import Register from 'page/register'
-import NewsDetail from 'page/NewsDetail'
+import NewsDetail from 'page/newsdetail'
+import VisionDetail from 'page/visiondetail'
+import Common from 'page/common'
 
 const theme = createMuiTheme({
     typography: {
@@ -59,7 +61,12 @@ const App = withStyles(styles)(({ classes }) => (
                     <Route path="/login" exact component={Login} />
                     <Route path="/register" exact component={Register} />
                     <Route path="/common" render={() =>
-                        <Route path="/common/detail/:orderId" component={NewsDetail} />
+                        <Common>
+                            <Switch>
+                                <Route path="/common/newsdetail/:orderId" component={NewsDetail} />
+                                <Route path="/common/visiondetail/:orderId" component={VisionDetail} />
+                            </Switch>
+                        </Common>
                     } />
                     <Route path="/" render={() =>
                         <Admin>

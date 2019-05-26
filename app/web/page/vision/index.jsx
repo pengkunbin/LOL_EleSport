@@ -11,6 +11,10 @@ const gridStyle = {
     textAlign: 'center'
 };
 
+let detail = ()=>{
+    window.open('/#/common/visiondetail/123456', '_blank')
+}
+
 const tabListNoTitle = [{
     key: 'all',
     tab: '所有'
@@ -28,7 +32,7 @@ const tabListNoTitle = [{
 const contentListNoTitle = {
     all:
         <div>
-            <Card.Grid style={gridStyle}>
+            <Card.Grid style={gridStyle} onClick={() =>detail()}>
                 <img src='//puui.qpic.cn/vpic/0/l00307smsvf.png/0' width="300">
                 </img>
                 <p>'MSI击杀时刻Day5：Zeros剑姬1V2反杀一人!'</p>

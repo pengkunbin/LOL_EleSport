@@ -1,0 +1,50 @@
+.vision {
+    padding: 80px;
+    padding-bottom: 0px;
+
+    .chat {
+        height: 460px;
+        background: #194567;
+    }
+}
+
+.comment {
+    border: 1px solid #ececec;
+    padding: 40px;
+    margin: 80px;
+    background: #ffffff;
+    .mycomment {
+        .comment-title {
+            width: 800px;
+            display: flex;
+            justify-content: space-between;
+            align-items:center;
+            div {
+                span:nth-child(1) {
+                    font-size: 26px;
+                }
+                span:nth-child(2) {
+                    font-size: 16px;
+                    margin-left: 15px;
+                    color: #CCD6E3;
+                }
+            }
+            span:nth-child(2) {
+                font-size: 16px;
+                color: #BB9A6C;
+            }
+        }
+    }
+
+    .comment-submit{
+        margin-top:30px;
+        width: 800px;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        .personal-comment{
+            margin-left: 100px;
+            width:700px;
+        }
+    }
+}

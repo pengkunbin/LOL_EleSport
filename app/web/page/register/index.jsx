@@ -3,17 +3,39 @@ import { Form, Icon, Input, Button, Checkbox } from 'antd'
 import Header from 'component/header'
 import 'antd/dist/antd.css'
 import './index.scss'
-import {NavLink} from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
+import Axios from '../../axios/index'
 
 class Login extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            nickname: '',
+            password: '',
+            mobile: '',
+            repassword: ''
+        }
+    }
+
+
     handleSubmit = (e) => {
         e.preventDefault()
         this.props.form.validateFields((err, values) => {
             if (!err) {
                 console.log('Received values of form: ', values)
+                Axios.post({
+                    url:'/api-user/user/do_register',
+                    data:values,
+                    receiver:'saoge'
+                }).then((res)=>{
+                    console.log('注册的信息:',res)
+                })
             }
         });
+        console.log(this.props.form)
     }
+
+
     render() {
         const { getFieldDecorator } = this.props.form;
         return (
@@ -24,10 +46,17 @@ class Login extends React.Component {
                     <div className="login">
                         <Form onSubmit={this.handleSubmit} className="login-form">
                             <Form.Item>
-                                {getFieldDecorator('username', {
+                                {getFieldDecorator('nickname', {
                                     rules: [{ required: true, message: '请输入用户名' }]
                                 })(
                                     <Input prefix={<Icon type="user" style={{ color: 'rgba(0,0,0,.25)' }} />} placeholder="用户名" />
+                                )}
+                            </Form.Item>
+                            <Form.Item>
+                                {getFieldDecorator('mobile', {
+                                    rules: [{ required: true, message: '请输入手机号' }]
+                                })(
+                                    <Input prefix={<Icon type="user" style={{ color: 'rgba(0,0,0,.25)' }} />} placeholder="手机号" />
                                 )}
                             </Form.Item>
                             <Form.Item>
@@ -38,7 +67,7 @@ class Login extends React.Component {
                                 )}
                             </Form.Item>
                             <Form.Item>
-                                {getFieldDecorator('password', {
+                                {getFieldDecorator('repassword', {
                                     rules: [{ required: true, message: '请再次输入密码' }]
                                 })(
                                     <Input prefix={<Icon type="lock" style={{ color: 'rgba(0,0,0,.25)' }} />} type="password" placeholder="再次输入密码" />
