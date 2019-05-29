@@ -13,22 +13,26 @@
     padding: 40px;
     margin: 80px;
     background: #ffffff;
+
     .mycomment {
         .comment-title {
             width: 800px;
             display: flex;
             justify-content: space-between;
-            align-items:center;
+            align-items: center;
+
             div {
                 span:nth-child(1) {
                     font-size: 26px;
                 }
+
                 span:nth-child(2) {
                     font-size: 16px;
                     margin-left: 15px;
                     color: #CCD6E3;
                 }
             }
+
             span:nth-child(2) {
                 font-size: 16px;
                 color: #BB9A6C;
@@ -36,15 +40,77 @@
         }
     }
 
-    .comment-submit{
-        margin-top:30px;
+    .comment-submit {
+        margin-top: 30px;
         width: 800px;
         display: flex;
         justify-content: flex-start;
         align-items: center;
-        .personal-comment{
+
+        .personal-comment {
             margin-left: 100px;
-            width:700px;
+            width: 700px;
+        }
+    }
+
+    .comment-list {
+        ul {
+            .list-item {
+                width: 800px;
+                margin-top: 25px;
+                padding-top: 30px;
+                border-top: 1px solid #ececec;
+                display: flex;
+                
+
+                .list-avatar {}
+
+                .list-info {
+                    padding-left: 25px;
+
+                    .list-nickname {
+                        display: flex;
+                        justify-content: space-between;
+                        width:800px;
+                        span :nth-child(1) {
+                            padding-top: 4px;
+                            padding-bottom: 4px;
+                            font-weight: 600;
+                            color: #bb9a6c;
+                        }
+                        // span :nth-child(2){
+                        //     font-family:'微软雅黑';
+                        //     font-weight:normal;
+                        //     font-size:14px;
+                        // }
+                    }
+
+                    .list-comment {
+                        font-size: 14px;
+                        color: #4b4b4b;
+                        line-height: 24px;
+                        padding-top: 4px;
+                        padding-bottom: 4px;
+                        word-wrap: break-word;
+                        font-family: '微软雅黑';
+                        font-weight: normal;
+                    }
+                    .reply{
+                        font-size: 12px;
+                        width:30px;
+                        cursor: pointer;
+                        color: #1c68a1;
+                    }
+                    .reply-comment{
+                        width:550px;
+                        margin-top:10px;
+                    }
+                    .childlist-comment{
+                        width:550px;
+                        background: #f7f7f7;
+                    }
+                }
+            }
         }
     }
 }

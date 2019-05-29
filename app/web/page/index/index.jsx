@@ -42,6 +42,7 @@ const theme = createMuiTheme({
     }
 })
 
+
 const styles = () => ({
     container: {
         maxWidth: '1200px',
