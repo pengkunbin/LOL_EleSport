@@ -1,5 +1,5 @@
 import React from 'react'
-import { Row, Col, Card, List, Avatar, Button, Skeleton } from 'antd'
+import { Row, Col, Card, List } from 'antd'
 import 'antd/dist/antd.css'
 import Axios from '../../axios/index'
 import './index.scss'
@@ -21,7 +21,7 @@ export default class News extends React.Component {
     }
 
     openOrderDetail = (item) => {
-        window.open(`/#/common/detail/${item.newsId}`, '_blank')
+        window.open(`/#/common/newsdetail/${item.newsId}`, '_blank')
     }
 
 
@@ -34,7 +34,6 @@ export default class News extends React.Component {
                 }
             }
         }).then((res) => {
-
             let newslist = res.data.map((item) => {
                 return {
                     title: item.title,
@@ -52,6 +51,7 @@ export default class News extends React.Component {
                 }
             }
         }).then((res) => {
+            console.log(res)
             let gamelist = res.data.map((item) => {
                 return {
                     title: item.title,
@@ -93,10 +93,12 @@ export default class News extends React.Component {
                         style={{ width: 459 }}
                         className="newsColLeftCard"
                     >
-                        <h1>TL携手FW成功晋级！MSI小组赛已确定五席</h1>
+                        <h1 onClick={() => this.openOrderDetail({newsId:123456})}>TL携手FW成功晋级！MSI小组赛已确定五席</h1>
                         <div className="space">
-                            <span>3胜13负！Clid与宁王交手记录</span>
-                            <span>下路分析Teddy与JKL一较高下</span>
+                            <span
+                                onClick={() => this.openOrderDetail({newsId:123456})}>
+                                3胜13负！Clid与宁王交手记录</span>
+                            <span onClick={() => this.openOrderDetail({newsId:123456})}>下路分析Teddy与JKL一较高下</span>
                         </div>
                         <List
                             className="demo-loadmore-list"
@@ -227,3 +229,5 @@ export default class News extends React.Component {
         )
     }
 }
+
+

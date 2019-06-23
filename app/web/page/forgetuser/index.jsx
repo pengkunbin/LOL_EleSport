@@ -1,5 +1,5 @@
 import React from 'react'
-import { Form, Icon, Input, Button } from 'antd'
+import { Form, Icon, Input, Button, Checkbox } from 'antd'
 import Header from 'component/header'
 import Footer from 'component/footer'
 import 'antd/dist/antd.css'
@@ -38,6 +38,7 @@ class RegisterForm extends React.Component {
             }
         });
     }
+    
     render() {
         const { getFieldDecorator } = this.props.form;
         return (
@@ -46,21 +47,14 @@ class RegisterForm extends React.Component {
                     {getFieldDecorator('nickname', {
                         rules: [{ required: true, message: '请输入用户名' }]
                     })(
-                        <Input prefix={<Icon type="user" style={{ color: 'rgba(0,0,0,.25)' }} />} placeholder="用户名" />
-                    )}
-                </Form.Item>
-                <Form.Item>
-                    {getFieldDecorator('mobile', {
-                        rules: [{ required: true, message: '请输入手机号' }]
-                    })(
-                        <Input prefix={<Icon type="user" style={{ color: 'rgba(0,0,0,.25)' }} />} placeholder="手机号" />
+                        <Input prefix={<Icon type="user" style={{ color: 'rgba(0,0,0,.25)' }} />} placeholder="用户名/手机号" />
                     )}
                 </Form.Item>
                 <Form.Item>
                     {getFieldDecorator('password', {
                         rules: [{ required: true, message: '请输入密码' }]
                     })(
-                        <Input prefix={<Icon type="lock" style={{ color: 'rgba(0,0,0,.25)' }} />} type="password" placeholder="密码" />
+                        <Input prefix={<Icon type="lock" style={{ color: 'rgba(0,0,0,.25)' }} />} type="password" placeholder="新密码" />
                     )}
                 </Form.Item>
                 <Form.Item>
@@ -73,9 +67,9 @@ class RegisterForm extends React.Component {
                 <Form.Item>
                     <div className="flex">
                         <Button type="primary" htmlType="submit" className="login-form-button">
-                            注册
+                            找回密码
                         </Button>
-                        <span> 已有账户?<NavLink to="/login" className="a">登录</NavLink></span>
+                        
                     </div>
                 </Form.Item>
             </Form>)
@@ -92,11 +86,12 @@ export default class Register extends React.Component {
         return (
             <div className="background">
                 <Header menuType="second" />
-                <div className="background-image">
+                <div className="background-image-forget">
                     <div className="login-background"></div>
                     <div className="login">
                         <WrappedNormalLoginForm />
                     </div>
+                    
                 </div>
                 <Footer/>
             </div>

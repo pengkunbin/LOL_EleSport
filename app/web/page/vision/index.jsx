@@ -11,7 +11,7 @@ const gridStyle = {
     textAlign: 'center'
 };
 
-let detail = ()=>{
+const detail = ()=>{
     window.open('/#/common/visiondetail/123456', '_blank')
 }
 

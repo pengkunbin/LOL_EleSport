@@ -2,6 +2,7 @@
 import React from 'react'
 import { Form, Icon, Input, Button, Checkbox, notification } from 'antd'
 import Header from 'component/header'
+import Footer from 'component/footer'
 import 'antd/dist/antd.css'
 import './index.scss'
 import { NavLink } from 'react-router-dom'
@@ -67,7 +68,7 @@ class LoginFrom extends React.Component {
                     })(
                         <Checkbox>记住我</Checkbox>
                     )}
-                    <NavLink className="login-form-forgot a" to="/home">忘记密码?</NavLink>
+                    <NavLink className="login-form-forgot a" to="/forgetuser">忘记密码?</NavLink>
                 </div>
                 <div className="flex">
                     <Button type="primary" htmlType="submit" className="login-form-button">
@@ -83,18 +84,17 @@ const WrappedNormalLoginForm = Form.create({ name: 'normal_login' })(LoginFrom);
 
 
 export default class Login extends React.Component {
-
     render() {
-
         return (
             <div className="background">
+                <Header menuType="second" />
                 <div className="background-image">
-                    <Header menuType="second" />
                     <div className="login-background"></div>
                     <div className="login">
                         <WrappedNormalLoginForm />
                     </div>
                 </div>
+                <Footer/>
             </div>
         )
     }

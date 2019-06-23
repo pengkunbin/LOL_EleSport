@@ -23,7 +23,9 @@ export default class Team extends React.Component {
                         <Card
                             hoverable
                             style={{ width: 310 }}
-                            cover={<img alt="example" src="//img.crawler.qq.com/lolwebvideo/20190124200637/8064b602192b33ef59101501e69bf15e/0" />}
+                            cover={<img alt="example" src="//img.crawler.qq.com/lolwebvideo/20190124200637/8064b602192b33ef59101501e69bf15e/0" />
+                            
+                            }
                         >
                             <p>BLG</p>
                         </Card>

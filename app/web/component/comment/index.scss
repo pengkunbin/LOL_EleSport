@@ -1,0 +1,15 @@
+.childlist-item {
+    width: 400px;
+    padding: 10px;
+    border: 1px solid #ECECEC;
+    margin-top:10px;
+    .childlist-title {
+        display: flex;
+        font-size: 14px;
+        justify-content: space-between;
+        font-family: '宋体'
+    }
+    .childlist-info{
+        margin-top: 10px;
+    }
+}

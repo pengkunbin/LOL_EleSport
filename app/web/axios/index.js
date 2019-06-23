@@ -22,7 +22,6 @@ let mypost = function (options, baseApi) {
 let myget = function (options, baseApi) {
     return new Promise((resolve, reject) => {
         axios({
-            withCredentials: true,
             url: options.url,
             method: 'get',
             baseURL: baseApi,
@@ -30,6 +29,7 @@ let myget = function (options, baseApi) {
             params: (options.data && options.data.params) || ''
         }).then((res) => {
             if (res.status === 200) {
+                console.log('axios:',res)
                 resolve(res.data)
             } else {
                 reject(res)
@@ -43,7 +43,7 @@ export default class Axios {
     static get(options) {
 
         const baseApi = {
-            laosan: 'http://192.168.1.102:8080/Match',
+            laosan: 'http://192.168.1.107:8091/',
             saoge: 'http://192.168.1.102:8200/'
         };
 
@@ -63,7 +63,7 @@ export default class Axios {
 
     static post(options){
         const baseApi = {
-            laosan: 'http://192.168.1.102:8080/Match',
+            laosan: 'www.match.com',
             saoge: 'http://192.168.1.102:8200/'
         };
 

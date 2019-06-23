@@ -24,8 +24,10 @@ import Course from '../course';
 import PersonData from '../persondata';
 import Login from 'page/login'
 import Register from 'page/register'
+import ForgetUser from 'page/forgetuser'
 import NewsDetail from 'page/newsdetail'
 import VisionDetail from 'page/visiondetail'
+import TeamDetail from 'page/teamdetail'
 import Common from 'page/common'
 
 const theme = createMuiTheme({
@@ -61,11 +63,13 @@ const App = withStyles(styles)(({ classes }) => (
                 <Switch>
                     <Route path="/login" exact component={Login} />
                     <Route path="/register" exact component={Register} />
+                    <Route path="/forgetuser" exact component={ForgetUser} />
                     <Route path="/common" render={() =>
                         <Common>
                             <Switch>
-                                <Route path="/common/newsdetail/:orderId" component={NewsDetail} />
-                                <Route path="/common/visiondetail/:orderId" component={VisionDetail} />
+                                <Route path="/common/newsdetail/:orderId" component={NewsDetail} exact/>
+                                <Route path="/common/visiondetail/:orderId" component={VisionDetail} exact/>
+                                <Route path="/common/teamdetail/:orderId" component={TeamDetail}/>
                             </Switch>
                         </Common>
                     } />
